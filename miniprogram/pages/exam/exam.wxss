@@ -1,0 +1,158 @@
+.e-container {
+    width: 100vw;
+    height: 100vh;
+}
+
+.e-header {
+    text-indent: 2em;
+    color: #ddd;
+    font-weight: bold;
+}
+
+.e-header .e-index {
+    color: #333;
+}
+
+.e-content {
+    transition: all .5s;
+    transform: translateX(0rpx);
+    opacity: 1;
+}
+
+.e-content.active {
+    transform: translateX(-200rpx);
+    opacity: .3;
+}
+
+.e-container .title {
+    text-align: center;
+    font-size: 60rpx;
+    font-weight: bold;
+    line-height: 120rpx;
+}
+
+.select-tab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.e-btn {
+    margin-top: 30rpx;
+    text-align: center;
+    width: 500rpx;
+    height: 100rpx;
+    line-height: 100rpx;
+    border-radius: 50rpx;
+    border: 2rpx solid #eee;
+}
+
+.e-btn:nth-child(1):hover {
+    border-color: #5CAB7D;
+}
+
+.e-btn:nth-child(2):hover {
+    border-color: #FFBC42;
+}
+
+.e-btn:nth-child(3):hover {
+    border-color: #566270;
+}
+
+.e-btn:nth-child(4):hover {
+    border-color: #E53A40;
+}
+
+/*测试结果*/
+.e-result {
+    margin: 100rpx auto 0 auto;
+    width: 600rpx;
+    height: 700rpx;
+    border: 1rpx solid #ddd;
+    box-shadow: 2rpx 3rpx 15rpx rgba(0, 0, 0, .3);
+    border-radius:30rpx;
+}
+.r-img{
+    display:block;
+    margin:10rpx auto;
+    width:450rpx;
+    height:60rpx;
+}
+.r-score{
+    text-align:center;
+    font-size:50rpx;
+    font-weight:600;
+    line-height:60rpx;
+    color:red;
+}
+/*表格*/
+.r-title{
+    color:#333;
+    font-weight:bold;
+}
+.r-table{
+    height:500rpx;
+    border-top:1rpx solid #ddd;
+    border-bottom:1rpx solid #ddd;
+}
+.r-table .r-item{
+    height:50rpx;
+    font-size:24rpx;
+    line-height:50rpx;
+    display:flex;
+}
+.r-item:nth-child(odd){
+    background-color: #eee;
+}
+.r-left{
+    position:relative;
+    flex:1;
+    text-indent:3em;
+    overflow: hidden;
+}
+.r-middle,.r-right{
+    width:150rpx;
+    text-align:center;
+    border-left:1rpx solid #ddd;
+}
+.r-middle.active{
+    text-decoration: line-through;
+}
+.r-index{
+    position:absolute;
+    left:20rpx;
+    top:7rpx;
+    text-indent:0;
+    width:35rpx;
+    height:35rpx;
+    line-height:35rpx;
+    text-align: center;
+}
+.r-item .typeA{
+    background-color: rgba(76, 168, 114, 0.2);
+}
+.r-item .typeB{
+    background-color: rgba(214, 170, 39, 0.2);
+}
+.r-item .typeC{
+    background-color: rgba(58, 106, 240, 0.2);
+}
+.r-item .typeD{
+    background-color: rgba(206, 123, 130, 0.2);
+}
+
+/*保存 restart 分享操作*/
+.e-tool{
+    width:500rpx;
+    margin:0 auto;
+    display:flex;
+}
+.et-item{
+    font-size:32rpx;
+    flex:1;
+    text-align:center;
+}
+.et-img{
+    width:100rpx;
+    height:100rpx;
+}

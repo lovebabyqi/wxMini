@@ -1,0 +1,13 @@
+<template name='guid-main-info'>
+		<view class='box' style="background-color:{{bgc}}">
+			<view class='logo'>
+				<image mode='aspectFit' class='r-img' src='{{logo}}'></image>
+			</view>
+			<view class='elplain'><text class='strong'>{{title}}</text> {{elplain}} </view>
+			<view class='strong'>投放要求：</view>
+			<view wx:for="{{rtext}}" wx:for-item='textItem' wx:for-index='textIndex' wx:key='textIndex' class='r-text'><text class='point'></text>{{textItem}}</view>
+		</view>
+		<view class='list'>
+			<view wx:for="{{list}}" wx:for-item='listItem' wx:for-index='listIndex' wx:key='listIndex' class='item'>{{listItem}}</view>
+		</view>
+</template>

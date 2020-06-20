@@ -1,0 +1,27 @@
+<!--miniprogram/pages/setting/setting.wxml-->
+<view class='container'>
+	<view class='title'>语言</view>
+	<view class='item'>中文
+        <image 
+            mode="aspectFit" 
+            src="/images/others/selectIcon.png" 
+            class='selectIcon' 
+            wx:if='{{true}}'>
+        </image>
+    </view>
+	<view class='title'>城市</view>
+	<view bindtap="selectCity">
+		<view wx:for="{{citys}}" 
+            wx:key="item" class="item" 
+            data-city="{{item}}"
+            >
+                {{item}} 
+                <image 
+                    mode="aspectFit" 
+                    src="/images/others/selectIcon.png" 
+                    class='selectIcon' 
+                    wx:if='{{item === city}}'>
+                </image>
+        </view>
+	</view>
+</view>

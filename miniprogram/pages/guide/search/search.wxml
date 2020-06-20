@@ -1,0 +1,10 @@
+<view class='h-input-box'>
+	<image class='h-search-icon' mode="aspectFit" src="/images/guide/search.png"></image>
+	<input class='h-input' bindinput="searchList" focus placeholder="搜索垃圾查看对应分类"></input>
+	<view class='h-btn' bindtap="backGuide">取消</view>
+</view>
+<scroll-view class='show-list'>
+	<view class='show-list'>
+		<view wx:for='{{showList}}' wx:for-item="listItem" wx:for-index="listIndex" wx:key='listIndex' class="item {{'type'+listItem.type}}">{{listItem.name}}</view>
+	</view>
+</scroll-view>

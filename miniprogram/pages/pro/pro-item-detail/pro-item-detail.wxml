@@ -1,0 +1,10 @@
+<!--miniprogram/pages/pro/pro-item-detail/pro-item-detail.wxml-->
+<view class='detail-container'>
+<view class='content'>
+    <view class='d-item' wx:for="{{itemData.info}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+        <image class='d-img' mode="aspectFit" src="{{item.imgPath}}"></image>
+        <view class='d-title'>{{item.title}}</view>
+        <view class="{{'type' + item.type}}">{{item.typeName}}</view>
+    </view>
+</view>
+</view>

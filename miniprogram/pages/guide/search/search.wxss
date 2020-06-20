@@ -1,0 +1,45 @@
+.h-input-box{
+    position:relative;
+    width:100vw;
+    height:80rpx;
+    display:flex;
+    align-items: center;
+    box-sizing:border-box;
+    padding-left:30rpx;
+    box-shadow: 3rpx 3rpx 5rpx rgba(0,0,0,.3);
+}
+.h-search-icon{
+    position:absolute;
+    box-sizing:border-box;
+    padding:10rpx;
+    width:60rpx;
+    height:60rpx;
+    border-radius: 50%;
+}
+.h-input{
+    box-sizing: border-box;
+    padding:10rpx 60rpx;
+    width:600rpx;
+    height:60rpx;
+    border-radius:35rpx;
+    background-color: #eee;
+}
+.h-btn{
+    display:inline-block;
+    line-height: 60rpx;
+    text-align:center;
+    flex:1;
+}
+/*检索结果, 列表样式*/
+.show-list{
+    height:calc(100vh - 80rpx);
+    overflow-y: scroll;
+}
+.show-list .item{
+    text-indent: 25rpx;
+    font-size:30rpx;
+    line-height: 75rpx;
+}
+.show-list .item:nth-child(odd){
+    background-color: #eee;
+}

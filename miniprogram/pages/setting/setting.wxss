@@ -1,0 +1,25 @@
+/* miniprogram/pages/setting/setting.wxss */
+.container{
+    width:100vw;
+    
+}
+.container>.title{
+    background-color: #eee;
+    padding:40rpx 0 10px 20rpx;
+    font-size:24rpx;
+}
+.container .item{
+    box-sizing:border-box;
+    position:relative;
+    width:100vw;
+    border-bottom:1rpx solid #eee;
+    padding:30rpx;
+    font-size:28rpx;
+}
+.container .selectIcon{
+    position:absolute;
+    right:60rpx;
+    display:inline-block;
+    width:40rpx;
+    height:40rpx;
+}

@@ -1,0 +1,16 @@
+
+.typeA{
+    color:#5CAB7D;
+}
+.typeB{
+    color:#FFBC42;
+}
+.typeC{
+    color:#566270;
+}
+.typeD{
+    color:#E53A40;
+}
+.typeE{
+    color:#333;
+}

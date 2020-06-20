@@ -1,0 +1,50 @@
+/*主体内容右侧*/
+.box{
+    width:430rpx;
+    margin:30rpx;
+    padding:30rpx;
+    border-radius:10rpx;
+    background-color: #c6e5d9;
+    font-size:25rpx;
+}
+.logo{
+    width:120rpx;
+    height:120rpx;
+    margin:20rpx auto;
+    /* background-color: green; */
+}
+.logo .r-img{
+    width: 120rpx;
+    height:120rpx;
+}
+.strong{
+    font-weight: bold;
+}
+.elplain{
+    line-height:1.5;
+    font-size:25rpx;
+    text-indent: 2em;
+}
+.r-text{
+    line-height:1.5;
+    position:relative;
+    padding-left:25rpx;
+}
+.r-text .point{
+    display:block;
+    width:10rpx;
+    height:10rpx;
+    border-radius:50%;
+    background-color: #333;
+    position:absolute;
+    left:5rpx;
+    top:10rpx;
+}
+.list .item{
+    text-indent: 25rpx;
+    font-size:30rpx;
+    line-height: 75rpx;
+}
+.list .item:nth-child(odd){
+    background-color: #eee;
+}

@@ -1,0 +1,51 @@
+{
+    "pages": [
+        "pages/guide/guide",
+        "pages/pro/pro",
+        "pages/exam/exam",
+        "pages/setting/setting",
+        "components/pro-item-component/pro-item-component",
+        "pages/pro/pro-item-detail/pro-item-detail",
+        "pages/guide/search/search"
+    ],
+    "window": {
+        "backgroundColor": "#F6F6F6",
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#F6F6F6",
+        "navigationBarTitleText": "垃圾分类指南",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "color": "#707070",
+        "selectedColor": "#FFBC42",
+        "backgroundColor": "#ffffff",
+        "list": [
+            {
+                "pagePath": "pages/guide/guide",
+                "text": "指南",
+                "iconPath": "/images/tab-bar/guide.png",
+                "selectedIconPath": "/images/tab-bar/guide_active.png"
+            },
+            {
+                "pagePath": "pages/exam/exam",
+                "text": "测试",
+                "iconPath": "/images/tab-bar/exam.png",
+                "selectedIconPath": "/images/tab-bar/exam_active.png"
+            },
+            {
+                "pagePath": "pages/pro/pro",
+                "text": "专题",
+                "iconPath": "/images/tab-bar/pro.png",
+                "selectedIconPath": "/images/tab-bar/pro_active.png"
+            },
+            {
+                "pagePath": "pages/setting/setting",
+                "text": "设置",
+                "iconPath": "/images/tab-bar/setting.png",
+                "selectedIconPath": "/images/tab-bar/setting_active.png"
+            }
+        ]
+    },
+    "sitemapLocation": "sitemap.json",
+    "style": "v2"
+}

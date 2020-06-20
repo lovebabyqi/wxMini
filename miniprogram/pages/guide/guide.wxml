@@ -1,0 +1,61 @@
+<import src='/template/guide-mainInfo-template/guide-mainInfo-template.wxml' />
+
+<view class='container'>
+	<!-- header-start -->
+	<view class='header'>
+		<image mode="aspectFit" class='h-img' src="/images/guide/position.png"></image>
+		<text class='h-text' bindtap="showMask">{{city}}</text>
+		<view class='h-input-box' bindtap='toSearch'>
+			<image class='h-search-icon' mode="aspectFit" src="/images/guide/search.png"></image>
+			<view class='h-input'>搜索垃圾查看对应分类</view>
+		</view>
+	</view>
+	<!-- header-end -->
+
+	<!-- mask遮罩-start -->
+	<view class='mask' wx:if="{{isShowMask}}">
+		<view class='m-bg'></view>
+		<view class='m-container'>
+			<view class='m-title'>
+				<image mode='aspectFit' class='m-image' src="/images/guide/position.png"></image>
+				<text class='m-tetx'>{{city}}</text>
+			</view>
+			<scroll-view scroll-y class='m-scroll' bindtap="selectCity">
+				<view class='scroll-item' wx:for="{{citys}}" wx:for-item="item" wx:key="item" data-city="{{item}}">{{item}}
+					<image mode="aspectFit" src="/images/others/selectIcon.png" class='m-selectIcon' wx:if='{{item === city}}'>
+					</image>
+				</view>
+			</scroll-view>
+		</view>
+	</view>
+	<!-- mask遮罩-end -->
+
+	<!-- 滚动公告-start -->
+	<view class='ad'>
+		<view class='a-bg'></view>
+		<text class='a-text'>[全国版垃圾分类测试]上线，朋友圈晒成绩单，大家一起来比拼！为大力推进垃圾分类，如有平台需接入垃圾分类服务，请留言。</text>
+	</view>
+	<!-- 滚动公告-end -->
+
+	<!-- 主体内容区-start -->
+	<view class='main-container'>
+		<view class='mc-left' bindtap="toggleTab">
+			<view class="mc-item {{currentIndex==index?'active':''}}" wx:for="{{tabBar}}" wx:for-item="item" wx:for-index="index" wx:key="index" data-index="{{index}}">
+				{{item.name}}
+				<view class="{{'type' + item.type}} mc-bg {{currentIndex==index?'active':''}}"></view>
+			</view>
+		</view>
+		<view class='mc-right'>
+			<view wx:for="{{guideInfo}}" wx:for-item="infoData" wx:for-index="guideIndex" wx:key='guideIndex' hidden="{{currentIndex!==guideIndex}}">
+				<scroll-view>
+					<template is='guid-main-info' data="{{...infoData}}"></template>
+				</scroll-view>
+			</view>
+		</view>
+	</view>
+	<!-- 主体内容区-end -->
+
+	<!-- footer声明-start -->
+	<view class='footer'><text>本查询系统仅供参考，具体分类要求以属地准也管理部门为准</text></view>
+	<!-- footer声明-end -->
+</view>

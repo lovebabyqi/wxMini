@@ -1,0 +1,6 @@
+<!--miniprogram/pages/pro/pro.wxml-->
+<view class='pro-container'>
+<block wx:for="{{mainList}}" wx:for-index="idx" wx:for-item='item' wx:key="idx">
+    <pro-item-component  itemData="{{item}}"></pro-item-component>
+</block>
+</view>

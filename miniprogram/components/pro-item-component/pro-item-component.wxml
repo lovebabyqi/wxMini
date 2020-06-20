@@ -1,0 +1,6 @@
+<!--miniprogram/components/pro-item-component/pro-item-component.wxml-->
+<view class='pro-item' bindtap="goDetail">
+		<image class='img' mode="aspectFit" src='{{itemData.imgPath}}'></image>
+		<view class='title'>{{itemData.name}}</view>
+		<view class='right'>></view>
+</view>

@@ -1,0 +1,54 @@
+<!--miniprogram/pages/exam/exam.wxml-->
+<view class='e-container'>
+
+	<block wx:for="{{exam}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+		<block wx:if="{{currentIndex===index}}">
+			<view class='e-header'><text class='e-index'>{{index<9?('0'+(index+1)):(index+1)}}</text> / 10</view>
+			<view class="e-content {{isActive?'active':''}}">
+				<view class='title'>{{item.name}}</view>
+				<view class='select-tab' bindtap="selectTab">
+					<view class='e-btn' data-type="A">厨余垃圾</view>
+					<view class='e-btn' data-type="B">其他垃圾</view>
+					<view class='e-btn' data-type="C">可回收物</view>
+					<view class='e-btn' data-type="D">有害垃圾</view>
+				</view>
+			</view>
+		</block>
+	</block>
+	<block wx:if="{{currentIndex===10}}">
+		<view class='e-result'>
+			<image mode="aspectFit" class='r-img' src="/images/exam/exam.png"></image>
+			<view class='r-score'>{{score}}</view>
+			<view class='r-table'>
+				<view class='r-item'>
+					<view class='r-left r-title'>题目</view>
+					<view class='r-middle r-title'>我的答案</view>
+					<view class='r-right r-title'>正确答案</view>
+				</view>
+				<view wx:for="{{record}}" wx:for-item="rItem" wx:for-index="rIndex" wx:key="rIndex" class='r-item'>
+					<view class='r-left'>
+						<view class="r-index {{'type'+ rItem.trueType}}">{{rIndex + 1}}</view>
+						{{rItem.examName}}
+					</view>
+					<view class="r-middle {{rItem.currentExam===rItem.trueExam?'':'active'}}">{{rItem.currentExam}}</view>
+					<view class='r-right'>{{rItem.trueExam}}</view>
+				</view>
+			</view>
+		</view>
+        <view class='e-tool'>
+            <view class='et-item' bindtap="saveExam">
+                <image mode="aspectFit" src='/images/exam/download.png' class='et-img'></image>
+                <view>保存成绩</view>
+            </view>
+            <view class='et-item' bindtap="restartExam">
+                <image mode="aspectFit" src='/images/exam/restart.png' class='et-img'></image>
+                <view>再考一次</view>
+            </view>
+            <view class='et-item' bindtap="share">
+                <image mode="aspectFit" src='/images/exam/share.png' class='et-img'></image>
+                <view>考考别人</view>
+            </view>
+        </view>
+	</block>
+
+</view>
